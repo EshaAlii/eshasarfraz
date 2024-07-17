@@ -1,0 +1,402 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #3b353a;
+    text-align: center;
+    color: #fcf4f4;
+    min-height: 100vh; /* Ensure body fills viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+}
+
+/* navbar styling */
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(36, 30, 35);
+    position: sticky;
+    top: 0;
+    height: 110px;
+}
+
+/* navbar hover animation */
+nav .navul {
+    list-style: none;
+    display: flex;
+    margin-right: 40px; /* Adjust spacing between items */
+}
+
+nav .navul li {
+    margin: 0 10px; /* Adjust spacing between items */
+}
+
+nav .navul li a{
+    text-decoration: none;
+    color: #fcf4f4;
+    position: relative;
+    transition: color 0.3s ease;
+    font-size: 25px; /* Adjust font size */
+    padding: 10px; /* Adjust padding */
+}
+
+nav .navul li a::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: rgb(229, 166, 39, 0.5);
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+nav .navul li a:hover{
+    color: #e5a627;
+}
+
+nav .navul li a:hover::after {
+    width: 100%;
+}
+
+/* navbar text styling */
+@font-face{
+    font-family: Proxima Nova;
+    src: url(proximoNova.otf);
+}
+
+@font-face{
+    font-family: PN Normal;
+    src: url(normalPN.otf);
+}
+
+@font-face{
+    font-family: slanted PN;
+    src: url(slantedPN.otf);
+}
+
+@font-face{
+    font-family: thick PN;
+    src: url(thickPN.otf);
+}
+
+nav a{
+    color: #e5a627;
+    letter-spacing: 1 px;
+    text-decoration: none;
+    font-family: Proxima Nova;
+    font-style: bold;
+    font-size: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px; /* Adjust margins */
+    margin-right: 20px; /* Adjust margins */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        justify-content: center; /* Center items when screen is smaller */
+        height: auto; /* Allow navbar to adjust height based on content */
+    }
+
+    .navul {
+        flex-wrap: wrap; /* Allow items to wrap onto next line */
+        justify-content: center; /* Center items when wrapped */
+    }
+
+    nav a {
+        font-size: 18px; /* Reduce font size for smaller screens */
+        margin: 5px; /* Adjust margins */
+    }
+}
+
+/* spacing for navbar elements */
+.navul {
+    list-style: none;
+}
+.navul li {
+    display: inline-block;
+}
+.navul li a{
+    color: #fcf4f4;
+    font-size: 25px;
+}
+
+/* header styling */
+h1 {
+    color: #fcf4f4;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+h2{
+    color: #fcf4f4;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-size: 45 px;
+    text-align: center;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+/* paragraph/text body styling */
+p{
+    color: #fcf4f4;
+    font-family: PN Normal;
+    font-style:inherit;
+    font-size: 30px;
+    text-align: center;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+/* styling for images */
+.homeimg{
+    display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 50%;
+}
+
+.fullsize{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.tkl{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.switchimg{
+    display: block;
+    max-width: 70%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/* styling for images side by side in sizes page */
+.column {
+    flex: 1;
+    padding: 5px;
+    text-align: center;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%;
+    border-collapse: collapse;
+}
+
+/* styling for size table in sizes page */
+table, th, td{
+    border: 2px solid white;
+    padding: 5px;
+    margin: auto;
+}
+
+.tableimg{
+    max-width: 100%;
+}
+
+th{
+    font-family: PN Normal;
+    color: #fcf4f4;
+    font-size: 20px;
+}
+
+td{
+    font-family: PN Nomal;
+    color: #fcf4f4;
+    font-size: 20px;
+}
+
+tr{
+    margin-left: 40px;
+    margin-right: 40px;
+    flex: 1;
+    text-align: center;
+}
+
+
+/* styling for video */
+.vidcontain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yt1{
+    width: 640px;
+    height: 360px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* image side by side adjustment */
+.side{
+    display: block;
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.side1{
+    display: block;
+    max-width: 80%;
+    max-height: 95%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* unordered list styling */
+.keylist {
+    list-style:disc;
+    margin-left: 350px;
+    margin-right: 350px;
+    text-align: left;
+}
+
+.keylista{
+    font-family: PN Normal;
+    color:  white;
+    font-size: 23px;
+    font-style:bold;
+    margin-left: 350px;
+    margin-right: 350px;
+}
+
+.keylist li {
+    font-family: PN Normal;
+    color: #fcf4f4;
+    font-size: 30px;
+}
+
+hr.limited {
+    margin-left: 350px;
+    margin-right: 350px;
+    border: 1px solid rgb(251, 246, 246); 
+    opacity: 0.5; 
+}
+
+hr.full {
+    border: 0.5px solid rgb(251, 246, 246); 
+    opacity: 0.25;
+    margin: 0; 
+    width: 100%; 
+}
+
+/* div styling */
+div{
+    padding: 2;
+}
+
+ul.navul li a {
+    text-decoration: none;
+    color: #fcf4f4;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+ul.navul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #e5a627;
+    color: #e5a627;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+ul.navul li a:hover {
+    color:  #e5a627;
+}
+
+ul.navul li a:hover::after {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    font-size: 20px;
+    padding: 20px; /* Space inside the footer */
+    margin-top: auto; /* Push footer to the bottom */
+    background-color: #252525; /* Adjust background color */
+}
+
+.social-icon-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.social-icon {
+    color: #fcf4f4;
+    font-size: 100px;
+    transition: color 0.2s;
+    text-decoration: none; /* Ensure no underline on the whole link */
+    display: flex; /* Use flexbox for positioning */
+    align-items: center; /* Center icon vertically */
+}
+
+.social-icon:hover,
+.social-icon-container:hover .hovered {
+    color: #e5a627;
+}
+
+.hovered {
+    text-decoration: none;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #fcf4f4;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.hovered::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #e5a627;
+    position: absolute;
+    bottom: -5px; /* Adjust to position the underline properly */
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+.hovered:hover {
+    color: #e5a627;
+}
+
+
