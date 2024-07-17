@@ -44,6 +44,7 @@ nav .navul li a{
     transition: color 0.3s ease;
     font-size: 25px; /* Adjust font size */
     padding: 10px; /* Adjust padding */
+    opacity: 0.5;
 }
 
 nav .navul li a::after{
@@ -51,15 +52,17 @@ nav .navul li a::after{
     display: block;
     width: 0;
     height: 3px;
-    background-color: rgb(229, 166, 39, 0.5);
+    background-color: #e5a627;
     position:absolute;
     bottom: 0;
     left: 0;
     transition: width 0.5s ease;
+    opacity: 1.0;
 }
 
 nav .navul li a:hover{
     color: #e5a627;
+    opacity: 1.0;
 }
 
 nav .navul li a:hover::after {
@@ -320,6 +323,7 @@ ul.navul li a {
     color: #fcf4f4;
     position: relative;
     transition: color 0.3s ease, background-color 0.3s ease;
+    opacity: 0.5;
 }
 
 ul.navul li a::after {
@@ -333,10 +337,12 @@ ul.navul li a::after {
     bottom: 0;
     left: 0;
     transition: width 0.5s ease;
+    opacity: 1.0;
 }
 
 ul.navul li a:hover {
     color:  #e5a627;
+    opacity: 1.0;
 }
 
 ul.navul li a:hover::after {
@@ -368,11 +374,13 @@ footer {
     text-decoration: none; /* Ensure no underline on the whole link */
     display: flex; /* Use flexbox for positioning */
     align-items: center; /* Center icon vertically */
+    opacity: 0.5;
 }
 
 .social-icon:hover,
 .social-icon-container:hover .hovered {
     color: #e5a627;
+    opacity: 1.0;
 }
 
 .hovered {
@@ -381,6 +389,7 @@ footer {
     margin-right: 40px;
     color: #fcf4f4;
     transition: color 0.3s ease, background-color 0.3s ease;
+    opacity: 0.5;
 }
 
 .hovered::after {
@@ -393,10 +402,12 @@ footer {
     bottom: -5px; /* Adjust to position the underline properly */
     left: 0;
     transition: width 0.5s ease;
+    opacity: 1.0;
 }
 
 .hovered:hover {
     color: #e5a627;
+    opacity: 1.0;
 }
 
 
