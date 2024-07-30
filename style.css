@@ -411,3 +411,20 @@ footer {
 }
 
 
+
+.canvas-container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto; /* Center canvas */
+    text-align: center;
+    padding-top: 0; /* Remove top padding */
+}
+
+.readjusted-canvas {
+    width: 100%;
+    height: auto;
+    max-width: 1280px;
+    max-height: 720px;
+    display: block;
+}
+
