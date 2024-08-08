@@ -120,6 +120,7 @@ function animate() {
     group.rotation.y += 0.05;
     group.rotation.z += 0.01;
 
+
     // Render scene + camera
     renderer.render(scene, camera);
 }
