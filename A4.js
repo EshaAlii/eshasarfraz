@@ -43,15 +43,13 @@ function init() {
 
 	// Create a metallic material with a gold tint
 	const metalMaterial = new THREE.MeshStandardMaterial({
-		color: 0xFFD700, // Gold color
-		metalness: 0.9,
+		color: 0xff80ac, // Pink color
+		metalness: 1.5,
 		roughness: 0.1,
-		envMap: environmentMap // Make sure this is defined
 	});
-	metalMaterial.wireframe = false;
 
 	const matteMaterial = new THREE.MeshStandardMaterial({
-		color: 0xFFD700, // Gold color
+		color: 0x05eaff, // Gold color
 		metalness: 0.1,
 		roughness: 0.8
 	});
