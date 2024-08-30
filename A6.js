@@ -242,9 +242,11 @@ class particleSystem {
 		for (let i = 0; i < this.m_positions.length; i += 3) {
 			// compute A.
 			let P = new THREE.Vector3(this.m_positions[i], this.m_positions[i + 1], this.m_positions[i + 2]); // particle position
-			let r = P.length();
-			P.normalize();
-			let a = - G/(r * r);
+			
+			// Comment out since they normalize P before force computation
+			// let r = P.length();
+			// P.normalize();
+			// let a = - G/(r * r);
 
 			// Calculate Planet 1 force
 			let toP1 = new THREE.Vector3().subVectors(this.planet1.position, P); // Vector from particle P to planet 1
@@ -279,7 +281,7 @@ class particleSystem {
 			this.m_color[i + 2] = color[2];
 
 			// reset (based it on the planets 1 and 2. Couldn't figure out particle oscillations)
-			if (r1 < 0.8 && r2 < 0.8 || r1 > 5.0 && r2 > 5.0) {
+			if (r1 < 0.8 ||  r2 < 0.8 || r1 > 5.0 || r2 > 5.0) {
 				this.m_positions[i] = Math.random() * 0.8 + 0.8; // x
 				this.m_positions[i + 1] = 0; // y
 				this.m_positions[i + 2] = 0; // z
